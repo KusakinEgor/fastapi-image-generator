@@ -1,9 +1,12 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
+from fastapi.security import OAuth2PasswordBearer
 from fastapi.responses import FileResponse
-from pydantic import BaseModel
+from app.utils.token import get_current_user
 import os
 
-router = APIRouter()
+router = APIRouter(
+    dependencies=[Depends(get_current_user)]
+)
 
 IMAGE_DIR = "static/images"
 
@@ -16,6 +19,6 @@ async def get_id_image(id: str):
     return FileResponse(file_path, media_type="image/png")
 
 @router.post("/images/{id}/rate")
-async def rate_image():
+async def rate_image(id: str):
     pass
 

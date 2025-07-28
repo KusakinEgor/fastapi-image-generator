@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, BackgroundTasks
-from pydantic import BaseModel
+from fastapi.security import OAuth2PasswordBearer
+from app.schemas.generate_model import PromptRequest
 from app.utils.token import get_current_user
 from app.services.image_generator import generate_image
 from uuid import uuid4
@@ -7,7 +8,10 @@ from uuid import uuid4
 router = APIRouter()
 
 @router.post("/generate/")
-async def generate(prompt_data: dict, background_tasks: BackgroundTasks):
+async def generate( 
+    prompt_data: PromptRequest,
+    background_tasks: BackgroundTasks,
+    user_access: OAuth2PasswordBearer = Depends(get_current_user)) -> list[dict]:
     prompt = prompt_data.get("prompt")
     num_images = int(prompt_data.get("num_images", 1))
     num_images = min(max(num_images, 1), 10)
