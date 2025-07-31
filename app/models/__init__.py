@@ -1,3 +1,4 @@
+from app.database import Base
 from .client import Client
 from .image import Image
 from .adminaction import AdminAction

@@ -1,8 +1,16 @@
 from sqlalchemy import Column, String, DateTime, ForeignKey, Text, Enum, Integer
 from sqlalchemy.dialects.postgresql import UUID
 from uuid import uuid4
+import enum
 from datetime import datetime
 from app.database import Base
+
+class StatusRequest(enum.Enum):
+    APPROVED = "approved"
+    REJECTED = "rejected"
+    PENDING = "pending"
+    READY = "redy"
+    ERROR = "fail"
 
 class PromptRequest(Base):
     __tablename__ = "PromptRequest"
@@ -15,7 +23,7 @@ class PromptRequest(Base):
     quantity = Column(Integer, nullable=False)
     width = Column(Integer, nullable=False, default=100)
     height = Column(Integer, nullable=False, default=100)
-    status = Column(Enum)
+    status = Column(Enum(StatusRequest))
     note = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
 
