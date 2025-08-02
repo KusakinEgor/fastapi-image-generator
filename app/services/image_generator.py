@@ -1,6 +1,5 @@
 from diffusers import StableDiffusionPipeline
 import torch
-from uuid import uuid4
 import os
 
 device = "cuda" if torch.cuda.is_available() else "cpu"

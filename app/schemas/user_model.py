@@ -6,13 +6,15 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     password: str
+    role: str
+    oauth_provider: str = "local"
 
 class UserRead(UserBase):
     id: int
     is_active: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class UserLogin(BaseModel):
     email: EmailStr

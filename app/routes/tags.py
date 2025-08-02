@@ -3,6 +3,10 @@ from pydantic import BaseModel
 
 router = APIRouter()
 
-@router.get("/tags/")
+@router.get(
+        "/tags/",
+        summary="Теги",
+        description="Получить изображения по данному тегу"
+)
 async def free_tags():
     pass
