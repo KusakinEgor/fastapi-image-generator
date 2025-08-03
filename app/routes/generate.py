@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, BackgroundTasks, Request
-from fastapi.security import OAuth2PasswordBearer
 from app.schemas.generate_model import PromptRequest as Prompt
 from app.models.promptrequest import PromptRequest, StatusRequest
 from app.utils.token import get_current_user
 from app.services.image_generator import generate_image
+from app.models.history import History
 from uuid import uuid4
 from app.models.image import Image
 from app.database import get_db
@@ -42,9 +42,17 @@ async def generate(
         created_at=datetime.utcnow()
     )
 
+    history_entry = History(
+        id=uuid4(),
+        user_id=user.id,
+        prompt_text=prompt_data.prompt,
+        num_images=num_images,
+        created_at=datetime.utcnow()
+    )
+
+    db.add(history_entry)
     db.add(prompt_entry)
     await db.flush()
-
 
     results = []
 
