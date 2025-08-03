@@ -4,6 +4,11 @@ from sqlalchemy.dialects.postgresql import UUID
 from uuid import uuid4
 from datetime import datetime
 from app.database import Base
+import enum
+
+class ActionType(enum.Enum):
+    DELETE = "delete"
+    UPDATE = "update"
 
 class ActionType(enum.Enum):
     CREATE = "create"

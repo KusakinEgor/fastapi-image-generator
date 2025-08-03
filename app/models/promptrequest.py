@@ -4,6 +4,14 @@ from uuid import uuid4
 import enum
 from datetime import datetime
 from app.database import Base
+import enum
+
+class StatusRequest(enum.Enum):
+    APPROVED = "approved"
+    REJECTED = "rejected"
+    PENDING = "pending"
+    READY = "redy"
+    ERROR = "fail"
 
 class StatusRequest(enum.Enum):
     APPROVED = "approved"

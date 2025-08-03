@@ -4,6 +4,11 @@ from uuid import uuid4
 import enum
 from datetime import datetime
 from app.database import Base
+import enum
+
+class RoleClient(enum.Enum):
+    ADMIN = "admin"
+    USER = "user"
 
 class RoleClient(enum.Enum):
     ADMIN = "admin"
