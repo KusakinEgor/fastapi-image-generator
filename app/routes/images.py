@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import FileResponse
-from pydantic import BaseModel
 from app.utils.token import get_current_user
 import os
 

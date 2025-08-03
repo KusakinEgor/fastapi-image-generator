@@ -8,6 +8,6 @@ class AuthToken(Base):
     __tablename__ = "AuthToken"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid4)
-    user_id = Column(String, ForeignKey("Client.id"))
+    user_id = Column(UUID(as_uuid=True), ForeignKey("Client.id"))
     token = Column(String, nullable=False)
     expires_at = Column(DateTime, default=datetime.utcnow)
