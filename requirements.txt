@@ -19,3 +19,6 @@ accelerate
 safetensors
 dotenv
 python-multipart
+psycopg2-binary
+asyncopg
+slowapi

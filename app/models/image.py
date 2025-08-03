@@ -21,5 +21,5 @@ class ImageTag(Base):
     __tablename__  = "ImageTag"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    image_id = Column(UUID(as_uuid=True), ForeignKey("poka xz"))
-    tag_id = Column(UUID(as_uuid=True), ForeignKey("poka xz"))
+    image_id = Column(UUID(as_uuid=True), ForeignKey("Image.id"))
+    tag_id = Column(UUID(as_uuid=True), ForeignKey("Tag.id"))
