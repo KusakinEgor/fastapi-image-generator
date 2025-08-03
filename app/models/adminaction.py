@@ -7,10 +7,6 @@ from app.database import Base
 import enum
 
 class ActionType(enum.Enum):
-    DELETE = "delete"
-    UPDATE = "update"
-
-class ActionType(enum.Enum):
     CREATE = "create"
     UPDATE = "update"
     DELETE = "delete"

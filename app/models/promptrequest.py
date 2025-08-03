@@ -10,14 +10,7 @@ class StatusRequest(enum.Enum):
     APPROVED = "approved"
     REJECTED = "rejected"
     PENDING = "pending"
-    READY = "redy"
-    ERROR = "fail"
-
-class StatusRequest(enum.Enum):
-    APPROVED = "approved"
-    REJECTED = "rejected"
-    PENDING = "pending"
-    READY = "redy"
+    READY = "ready"
     ERROR = "fail"
 
 class PromptRequest(Base):

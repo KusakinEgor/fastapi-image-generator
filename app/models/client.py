@@ -10,10 +10,6 @@ class RoleClient(enum.Enum):
     ADMIN = "admin"
     USER = "user"
 
-class RoleClient(enum.Enum):
-    ADMIN = "admin"
-    USER = "user"
-
 class Client(Base):
     __tablename__ = "Client"
 
