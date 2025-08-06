@@ -7,8 +7,8 @@ from app.database import Base
 import enum
 
 class RoleClient(enum.Enum):
-    ADMIN = "admin"
-    USER = "user"
+    ADMIN = "ADMIN"
+    USER = "USER"
 
 class Client(Base):
     __tablename__ = "Client"

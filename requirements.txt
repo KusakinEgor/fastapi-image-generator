@@ -22,3 +22,5 @@ python-multipart
 psycopg2-binary
 asyncopg
 slowapi
+sqladmin
+itsdangerous
