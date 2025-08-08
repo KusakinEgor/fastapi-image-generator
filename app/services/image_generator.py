@@ -26,5 +26,9 @@ def generate_image(
         image = pipe(prompt, num_inference_steps=steps).images[0]
         filepath = os.path.join(output_dir, f"{image_id}.png")
         image.save(filepath)
+        print(f"[INFO] Image saved at: {filepath}")
+        return {"filepath": filepath}
     except Exception as e:
         print(f"[ERROR] Failed to generate image: {e}")
+        return {"error": str(e)}
+
