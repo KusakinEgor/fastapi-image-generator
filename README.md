@@ -176,7 +176,7 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu12
 - Файл `alembic/env.py` отвечает за интеграцию Alembic с вашим SQLAlchemy-моделями и контекстом БД.
   ```python
   from app.database import Base
-  from app.models import Client, Image,    ImageTag, AdminAction, AuthToken,      Tag, Rating, PromptRequest, History
+  from app.models import Client, Image, ImageTag, AdminAction, AuthToken, Tag, Rating, PromptRequest, History
   
   target_metadata = Base.metadata
   ```
