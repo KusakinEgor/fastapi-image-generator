@@ -71,13 +71,19 @@ FastAPI Image Generator - это RESTful API-сервис, позволяющи�
 ---
 
 ## Стек технологий
-- Python 3.10+
-- FastAPI
-- SQLAlchemy
-- Pydantic
-- JWT (OAuth2)
-- PostgreSQL
-- Alembic
+- [![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
+
+- [![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+
+- [![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-000000?logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org/)
+
+- [![Pydantic](https://img.shields.io/badge/Pydantic-176DC3?logo=pydantic&logoColor=white)](https://pydantic-docs.helpmanual.io/)
+
+- [![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white)](https://jwt.io/)
+
+- [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+
+- [![Alembic](https://img.shields.io/badge/Alembic-2C3E50?logo=alembic&logoColor=white)](https://alembic.sqlalchemy.org/)
 
 ---
 
