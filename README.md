@@ -1,6 +1,6 @@
 <h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;">
   <a name="logo">
-    <img src="pictures/icon.PNG" style="width:100%;height:100%"/>
+    <img src="pictures/icon.png" style="width:100%;height:100%"/>
   </a>
   <br /><br />
   <strong>FastAPI Image Generator</strong>
